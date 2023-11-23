@@ -16,7 +16,7 @@
 
 	let actor = '';
 
-	try {
+	onMount(async () => {
 		const actorAccount = account.get();
 		actorAccount.then(
 			function (response) {
@@ -30,11 +30,7 @@
 				actor = 'Guest';
 			},
 		);
-	} catch (error) {
-		actor = 'Guest';
-		console.log(error);
-	}
-
+	});
 	let activities = [];
 
 	data.allpats.forEach((pat) => {

@@ -2,8 +2,6 @@ import { Query } from 'appwrite';
 import { databases } from '$lib/appwrite';
 import { env } from '$env/dynamic/public';
 
-export const ssr = false;
-
 export async function load({ params }) {
 
 	const listdatabase = await databases.listDocuments(
